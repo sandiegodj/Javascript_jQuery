@@ -1,0 +1,30 @@
+#nav{
+	margin:auto;
+	width: 400px;
+	background-color: #d3d3d3;
+	border-radius: 10%;
+	border: 2px solid black;
+}
+h1{
+	margin:auto;
+	text-align:center;
+}
+.button{
+	border-style: none;
+}
+.button:hover{
+	font-weight: bold;
+}
+#container {
+	margin:auto;
+	overflow: auto;
+	width: 960px;
+	padding-top: 20px;
+}
+.grid{
+	background-color: black;
+	float:right;
+}
+.grid_right{
+	clear:both;
+}
