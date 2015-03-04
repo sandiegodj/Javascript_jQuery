@@ -5,19 +5,25 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
 </head>
 <body>
-	<div id ="nav">
-		<h1 class="header">Etch-n-Sketch</h1>
+	<div id ="main">
+		<h1 class="header">Etch-n-Sketch</h1><p class="border"><input id="borders" type="checkbox" name="borders"/>show grid</p>
+
+		
+		<div class="screen">
+			<div id="container"></div>
+		</div>
 		<div id="buttons">
-			<input id="borders" type="checkbox" name="borders"/>show grid
-			<input id="new" class="button" type="button" value="Create"/>
-			<input id="normal" class="button" type="button" value="Normal"/>
+			<input id="new" class="button" type="button" value="New"/>
+			<input id="normal" class="button" type="button" value="Black"/>
 			<input id="color" class ="button" type="button" value="Color"/>
 			<input id="gradient" class="button" type="button" value="Gradient"/>
 			<input id="random" class="button" type="button" value="Random"/>
+			<input id="reset" class="button" type="button" value="Reset" />
 		</div>
-</div>
-	<div id="container"></div>
+					
+	</div>
 </body>
 </html>

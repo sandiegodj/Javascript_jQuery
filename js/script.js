@@ -1,9 +1,9 @@
 $(document).ready(function() {
-	
+	populateGrid(50)
 	//listen for buttons
 	$('#borders').change( function() {
     	if($(this).is(':checked')) {
-	    	$('.grid').css('outline', '1px solid white');
+	    	$('.grid').css('outline', '1px solid black');
 	    } 
 	    else {
 	        $('.grid').css('outline', "none");
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
 	$("#color").click(function() {
 		colorOption();
-	})
+	});
 
 	$("#gradient").click(function() {
 		gradient();
@@ -30,13 +30,22 @@ $(document).ready(function() {
 		random();
 	});
 
+	$("#reset").click(function() {
+		clear();
+	});
+
 });
 
+
+
+
 //functions
+
+
 newSize = function () {
 	$("#container").empty();
-		var input = prompt("Enter a new size");
-		if (input >= 1 && input <= 111){
+		var input = prompt("Enter a new size between 1 and 100");
+		if (input >= 1 && input <= 100){
 			populateGrid(input);	
 		}else {
 			alert("Choose a better number");
@@ -61,7 +70,7 @@ populateGrid = function (input) {
 normalColor = function() {
 	$(".grid").unbind();
 	$(".grid").mouseenter(function() {
-		$(this).css("background-color", "red");
+		$(this).css("background-color", "#000000");
 	});
 };
 
@@ -82,7 +91,7 @@ gradient  = function() {
 	$(".grid").unbind();
 	$(".grid").mouseenter(function() {
 		var currentOpacity = $(this).css('opacity');
-			if(currentOpacity > .2){
+			if(currentOpacity >= 0){
 				$(this).css('opacity', currentOpacity - 0.1);
 			
 			}
@@ -99,3 +108,6 @@ random = function () {
 randomColor = function () {
 		return '#'+ Math.floor(Math.random()*16777215).toString(16);		
 };	
+clear = function () {
+	$(".grid").css("background-color", "#ffffff");
+};
